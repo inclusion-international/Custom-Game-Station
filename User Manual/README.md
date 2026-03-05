@@ -1,7 +1,5 @@
 # User Manual
 
-# Installation Instructions
-
 ## Firmware Flashing
 
 If you have a new puck.js, you will have to flash the firmware onto it. You can do this by the following steps:
@@ -18,8 +16,9 @@ If you have a new puck.js, you will have to flash the firmware onto it. You can 
 In order to use the custom game station as a **mouse/keyboard** device you must **pair** it as a **Bluetooth device in the OS Bluetooth device manager**.
 
 1. **Check** the device is **not connected** via Web Bluetooth or not connected to any other computer or smartphone.
-2. Now connect it via traditional Bluetooth of your own PC or smartphone/tablet.
-3. Now the Game-Station is ready to be used.
+2. **Connect** it via OS Bluetooth manager of your PC or smartphone/tablet.
+   
+Now the Game-Station is ready to be used.
 
 ## 🛠️ Mounting Specifications
 
@@ -60,7 +59,7 @@ Some wheelchair joysticks have a tilted zero position. In such a case the zero p
 
 * **Long-Press** the Top Button (T) and release it.
 
-After this step the game station is ready to be used. It is also possible to perform the calibration at anytime, by a long press of the cover button.
+It is also possible to perform the calibration at anytime.
 
 ## Top Button (S)
 
