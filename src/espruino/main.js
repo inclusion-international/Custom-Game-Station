@@ -9,7 +9,13 @@ const DEBUG = 0;
 //
 var HID = require("ble_hid_combo");
 var eddystone = require("ble_eddystone");
-var SWBtn = require("SWBtn.js");
+//
+// Use the SWBtn module from the URL to simplify flashing. 
+// The URL will be automatically fetched by the Espruino IDE and included in the project. 
+// For development, you can replace the URL with a local file path to SWBtn.js that must be uploaded
+// via the 'Access files in device storage' button.
+// var SWBtn = require("SWBtn.js");
+var SWBtn = require("https://inclusion-international.github.io/Custom-Game-Station/src/espruino/SWBtn.js");
 var AHRS = require("https://inclusion-international.github.io/Wheely-Joystick-Mouse/src/Espruino/AHRS.js");
 
 //
