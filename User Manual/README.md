@@ -2,61 +2,76 @@
 
 # Installation Instructions
 
-* Web Connection
+## Firmware Flashing
 
-1. Open the [Espruino Web IDE](https://www.espruino.com/ide/) on your browser
-2. Connect your Puck.js to your computer via Bluetooth (Top-left button)
-3. Load the firmware [main code](Code/HEIDI_Final_Code.js) into the Espruino Web IDE.
-4. Check on the "Access files in device's storage" the presence of the [Switch Button code[(Code/SWBtn_Final_Version.js). This code should be stored as "SWBtn".
-5. Click the "Send to Espruino (Flash)" button in the IDE to upload the firmware to your Puck.js.
-6. When the process is done, a message should appear in the console log in the right.
+If you have a new puck.js, you will have to flash the firmware onto it. You can do this by the following steps:
 
-* Computer Connection
+1. Open the [Espruino Web IDE](https://www.espruino.com/ide/) in your browser **with Web Bluetooth support** (e.g. Chrome).
+2. **Connect** the Puck.js in the IDE via Web Bluetooth (Top-left button: <img alt="" src="wb-icon.png" width="5%"/>)
+4. **Open** the firmware [main.js](src/espruino/main.js) in the Espruino Web IDE.
+5. **Click** the "**Send to Espruino (Flash)** <img alt="" src="send-flash.png" width="5%"/>" button in the IDE to upload the firmware to your Puck.js.
+   1. When the process is done, a message should appear in the console log on the left side.
+6. **Disconnect** Puck.js from the Espruino IDE.
 
-1. Click on the Top-Left button to disconnect temporanealy the microcontroller.
-2. Now connect it via traditional Bluetooth of your own PC.
+## Pairing as Mouse/Keyboard
+
+In order to use the custom game station as a **mouse/keyboard** device you must **pair** it as a **Bluetooth device in the OS Bluetooth device manager**.
+
+1. **Check** the device is **not connected** via Web Bluetooth or not connected to any other computer or smartphone.
+2. Now connect it via traditional Bluetooth of your own PC or smartphone/tablet.
 3. Now the Game-Station is ready to be used.
 
-# 🛠️ Mounting Specifications
+## 🛠️ Mounting Specifications
 
 Follow these instructions to correctly assemble and install the Custom Game Station on the wheelchair.
 
 ### 1. Component Assembly
-* **Joystick Core:** Insert the **Puck.js** microcontroller into the **Joystick Body**. Secure the assembly by snapping the **Joystick Cap** on top.
-* **Side Control:** Attach the **Side Knee Button** to the **Side Holder**.
+
+1. **Joystick Core:** Insert the **Puck.js** microcontroller into the **Joystick Body**. Secure the assembly by snapping the **Joystick Cap** on top.
+2. Put a silicon cover onto the joystick top to make it **waterproof**.
+3. **Wiring & Connectivity:** Follow the established color code to connect the internal joystick wires.
+4. **Side Control:** Attach the **Side Knee Button** to the **Side Holder**.
 
 ### 2. Wheelchair Preparation
-* **Removal:** Carefully remove the original rubber cover from the wheelchair's joystick shaft.
-* **Wiring & Connectivity:** * Follow the established color code to connect the internal joystick wires.
-    * Connect the wires to the button integrated into the cover and to the plug-in connector for the lateral (knee) button.
+
+* **Removal:** Carefully remove the original joystick handle from the wheelchair's joystick shaft.
 
 ### 3. Final Installation & Securing
+
 * **Joystick:** Slide the new 3D-printed cover onto the joystick rod.
-* **Base Cover:** Position the cover firmly onto the joystick base. To prevent movement and ensure a stable fit, attach two elastic bands to the lateral hooks:
+* **Top Cover:** Position the cover firmly onto the joystick base. To prevent movement and ensure a stable fit, attach two elastic bands to the lateral hooks:
     * One elastic band around the back side of the joystick base.
     * The second elastic band underneath the base.
 * **Side Button Mounting:** Install the Side Holder onto the inner frame of the wheelchair. Adjust the screw to rotate and fix the button in the user's desired ergonomic position.
 * **Final Connection:** Plug the cable from the side knee button into the main cover socket.
 
-# Element description
+## Operation Modes
 
-The core element is a custom joystick cover, designed to fit onto a personal wheelchair-joystick, with a Puck.js chip inside. This chip works as a sensor: it detects the joystick movements and translates them into different game actions.
-Furthermore there is a special cover, which contains the batteries for joystick power supply, host a so-called cover-button, and provide the link for the side-knee-button. This last button is meant to be positioned near the knee, under the cover.
+The joystick tilt can be translated to **mouse movement** or **WASD keypresses** and hence be used in different game actions.
+The buttons support button press patterns and two types of press durations: 
+* **Short-Press & Release**
+* **Long-Press & Release**: Duration > 800ms.
 
-* Detailed functions
+<img src="../Photos/IMG_3863.png" width="34%">
 
-Before playing a calibration step is required. By performing a long press (~ 2 seconds) on the cover button, the system automatically execute the calibration of the Puck.js’ accelerometer to ensure that joystick movements are interpreted correctly and precisely. After this step the game station is ready to be used. It is also possible to perform the calibration at anytime, by a long press of the cover button.
+### Calibration
 
-* Side-knee-button
+Some wheelchair joysticks have a tilted zero position. In such a case the zero position must be calibrated to ensure proper operation:
 
-A short press of this button (1 click) is translated into the left click of the mouse, so make the player interact with the game environment. A long press of this button will change the joystick behaviour: this feature let the player change between the movement control (the WASD keys) and the perspective point of view (the mouse movement), and vice versa. This allows the player to navigate and look around using the same joystick without needing extra devices.
+* **Long-Press** the Top Button (T) and release it.
 
-* Top cover-button
+After this step the game station is ready to be used. It is also possible to perform the calibration at anytime, by a long press of the cover button.
 
-A short press of this button (1 click) is translated into the TAB button of the keyboard. This is just a shortcut to let the player be able to open the map in the game with less effort. As already said, the long press of this button perform the calibration of the accelerometer.
+## Top Button (S)
 
-* Other aspects
+The Top Button supports the following actions:
 
-The 3 wires between the joystick and the cover must match their color type (Black, Blue, Red): one for battery supply, and one for each button.
-Inside the cover there is the space for batteries: they are AAA battery (1.5 V each). In this way they could be replaced easily
-The cover has to be fixed in place: for this reason, an elastic bandage is helpful and provide stability to the system.
+* **Short-Press**: <kbd>Tab</kbd> 
+* **Long-Press**: Calibration
+
+### Side-knee-button
+
+* **Short-Press**: Left Mouse Click 
+* **Long-Press**: Change of Mode
+  * **Mouse movement**: The joystick tilt is translated into mouse movement. The mouse speed is according to the actual tilt level of the joystick.
+  * **Hold of WASD keys**: <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd>, <kbd>d</kbd> depending on joystick tilt direction.
