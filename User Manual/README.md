@@ -6,7 +6,7 @@ If you have a new puck.js, you will have to flash the firmware onto it. You can 
 
 1. Open the [Espruino Web IDE](https://www.espruino.com/ide/) in your browser **with Web Bluetooth support** (e.g. Chrome).
 2. **Connect** the Puck.js in the IDE via Web Bluetooth (Top-left button: <img alt="" src="wb-icon.png" width="5%"/>)
-4. **Open** the firmware [Puck-js.js](/Puck-js.js) in the Espruino Web IDE.
+4. **Open** the firmware [Puck-js](https://raw.githubusercontent.com/inclusion-international/Custom-Game-Station/refs/heads/main/Puck-js/Puck-js.js) in the Espruino Web IDE.
 5. **Click** the "**Send to Espruino (Flash)** <img alt="" src="send-flash.png" width="5%"/>" button in the IDE to upload the firmware to your Puck.js.
    1. When the process is done, a message should appear in the console log on the left side.
 6. **Disconnect** Puck.js from the Espruino IDE.
@@ -31,7 +31,7 @@ If you have a new XIAO board, you will have to flash the firmware onto it. You c
    
    <img width="408" height="445" alt="image" src="https://github.com/user-attachments/assets/a5db4661-7a52-4baa-b548-4ce45c6cb4b5" />
 
-8.  Copy this [code](https://raw.githubusercontent.com/SinttiM/Custom-Game-Station/refs/heads/main/XIAO%20nRF52840%20Sense), and paste it to the Arduino IDE, then click upload icon as attached below.
+8.  Copy this [code](https://raw.githubusercontent.com/inclusion-international/Custom-Game-Station/refs/heads/main/XIAO%20nRF52840%20Sense), and paste it to the Arduino IDE, then click upload icon as attached below.
    
    <img width="659" height="200" alt="image" src="https://github.com/user-attachments/assets/15131c4d-98f4-4949-b8f9-09445e64bd77" />
 
